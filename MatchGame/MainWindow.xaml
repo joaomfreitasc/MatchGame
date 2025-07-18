@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatchGame"
         mc:Ignorable="d"
-        Title="Find all of the match animals" Height="450" Width="400">
-    <Grid x:Name="mainGrid">
+        Title="Find all of the match animals" Height="600" Width="400">
+    <Grid x:Name="mainGrid" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -14,6 +14,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -75,5 +76,8 @@
         <TextBlock Grid.Column="3" Grid.Row="3" Text="?" FontSize="48"
                    HorizontalAlignment="Center" VerticalAlignment="Center" 
                    MouseDown="TextBlock_MouseDown"/>
+        <TextBlock x:Name="timeTextBlock" HorizontalAlignment="Left" Grid.Row="4"
+                   TextWrapping="Wrap" Text="Elapsed Time" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.404,1.71" Height="58" Width="157" FontSize="32" Grid.ColumnSpan="3" MouseDown="timeTextBlock_MouseDown" Grid.Column="1" IsEnabled="False" Margin="50,0,0,0"/>
     </Grid>
 </Window>
